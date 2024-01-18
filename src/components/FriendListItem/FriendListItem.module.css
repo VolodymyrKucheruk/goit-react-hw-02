@@ -1,0 +1,32 @@
+.item {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: #fff;
+   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+   border-radius: 2px;
+   border: none;
+   min-width: 100px;
+   flex: content;
+   border-radius: 50%;
+   margin-bottom: 50px;
+   padding: 12px; 
+   cursor: pointer; 
+ }
+ 
+
+.name {
+  font-size: 15px;
+}
+.statusClass {
+   font-size: 8px; 
+}
+
+.friendRed {
+  color: rgb(139, 138, 138);
+}
+
+.friendGreen {
+  color: rgb(36, 171, 36);
+}

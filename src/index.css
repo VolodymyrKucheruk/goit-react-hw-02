@@ -1,0 +1,46 @@
+:root {
+  font-family: "Times New Roman", Times, serif, Arial, Helvetica, sans-serif;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  background: rgb(255, 220, 247);
+  background: radial-gradient(
+    circle,
+    rgba(255, 220, 247, 0.33657212885154064) 28%,
+    rgba(255, 168, 166, 0.2553396358543417) 59%,
+    rgba(246, 197, 158, 0.2721463585434174) 100%
+  );
+  box-sizing: content-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
