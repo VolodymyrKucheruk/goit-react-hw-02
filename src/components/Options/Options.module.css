@@ -1,0 +1,267 @@
+
+.items {
+  margin-bottom: 10px;
+  min-width: 400px;
+}
+/**
+  |============================
+  | GOOD STYLE
+  |============================
+*/
+.good {
+  color: transparent;
+  background: rgb(245, 243, 210);
+  background: radial-gradient(
+    circle,
+    rgba(245, 243, 210, 0.2629844173997724) 0%,
+    rgba(153, 88, 17, 0.5374942213213411) 100%
+  );
+  height: 50px;
+  width: 150px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.1s ease-in-out;
+}
+
+.good:hover {
+  box-shadow: 0.5px 0.5px 150px #252525;
+}
+.good.type1::after {
+  content: "😊";
+  height: 50px;
+  width: 150px;
+  background: rgb(251, 250, 63);
+  background: radial-gradient(
+    circle,
+    rgba(251, 250, 63, 1) 0%,
+    rgba(23, 219, 125, 1) 100%
+  );
+  color: #fff;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translateY(50px);
+  font-size: 1.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.good.type1::before {
+  content: "Good";
+  height: 50px;
+  width: 150px;
+  bbackground: rgb(245, 243, 210);
+  background: radial-gradient(
+    circle,
+    rgba(245, 243, 210, 0.2629844173997724) 0%,
+    rgba(153, 88, 17, 0.5374942213213411) 100%
+  );
+  color: #241f1b;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translateY(0px) scale(1.2);
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.good.type1:hover::after {
+  transform: translateY(0) scale(1.2);
+}
+
+.good.type1:hover::before {
+  transform: translateY(-50px) scale(0) rotate(120deg);
+}
+/**
+  |============================
+  | NEUTRAL STYLE
+  |============================
+*/
+.neutral {
+  color: transparent;
+  height: 50px;
+  width: 150px;
+  background: rgb(245, 243, 210);
+  background: radial-gradient(
+    circle,
+    rgba(245, 243, 210, 0.2629844173997724) 0%,
+    rgba(153, 88, 17, 0.5374942213213411) 100%
+  );
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+.neutral:hover {
+  box-shadow: 0.5px 0.5px 150px #252525;
+}
+.neutral.type1::after {
+  content: "😐";
+  height: 50px;
+  width: 150px;
+  background: rgb(246, 251, 63);
+  background: radial-gradient(
+    circle,
+    rgba(246, 251, 63, 1) 0%,
+    rgba(219, 99, 23, 1) 100%
+  );
+  color: #fff;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translateY(50px);
+  font-size: 1.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.neutral.type1::before {
+  content: "Neutral";
+  height: 50px;
+  width: 150px;
+  background: rgb(245, 243, 210);
+  background: radial-gradient(
+    circle,
+    rgba(245, 243, 210, 0.2629844173997724) 0%,
+    rgba(153, 88, 17, 0.5374942213213411) 100%
+  );
+  color: #241f1b;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translateY(0px) scale(1.2);
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.neutral.type1:hover::after {
+  transform: translateY(0) scale(1.2);
+}
+
+.neutral.type1:hover::before {
+  transform: translateY(-50px) scale(0) rotate(120deg);
+}
+/**
+  |============================
+  | BAD STYLE
+  |============================
+*/
+.bad {
+  color: transparent;
+  height: 50px;
+  width: 150px;
+  background: rgb(245, 243, 210);
+  background: radial-gradient(
+    circle,
+    rgba(245, 243, 210, 0.2629844173997724) 0%,
+    rgba(153, 88, 17, 0.5374942213213411) 100%
+  );
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+.bad:hover {
+  box-shadow: 0.5px 0.5px 150px #252525;
+}
+.bad.type1::after {
+  content: "😡";
+  height: 50px;
+  width: 150px;
+  background: rgb(251, 142, 63);
+  background: radial-gradient(
+    circle,
+    rgba(251, 142, 63, 1) 0%,
+    rgba(219, 23, 23, 1) 100%
+  );
+  color: #fff;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translateY(50px);
+  font-size: 1.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.bad.type1::before {
+  content: "Bad";
+  height: 50px;
+  width: 150px;
+  background: rgb(245, 243, 210);
+  background: radial-gradient(
+    circle,
+    rgba(245, 243, 210, 0.2629844173997724) 0%,
+    rgba(153, 88, 17, 0.5374942213213411) 100%
+  );
+  color: #241f1b;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translateY(0px) scale(1.2);
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.bad.type1:hover::after {
+  transform: translateY(0) scale(1.2);
+}
+
+.bad.type1:hover::before {
+  transform: translateY(-50px) scale(0) rotate(120deg);
+}
+/**
+  |============================
+  | RESET STYLE
+  |============================
+*/
+.reset {
+  color: #000000;
+  font-size: 1.4rem;
+  font-weight: 600;
+  height: 50px;
+  width: 150px;
+  background: rgb(245, 243, 210);
+  background: radial-gradient(
+    circle,
+    rgba(245, 243, 210, 0.2629844173997724) 0%,
+    rgba(153, 88, 17, 0.5374942213213411) 100%
+  );
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+.reset:hover {
+  box-shadow: 0.2px 0.2px 50px #ffffff;
+}

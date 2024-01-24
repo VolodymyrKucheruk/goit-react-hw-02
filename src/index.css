@@ -12,15 +12,6 @@ body {
   font-family: sans-serif;
   line-height: 1.5;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  background: rgb(255, 220, 247);
-  background: radial-gradient(
-    circle,
-    rgba(255, 220, 247, 0.33657212885154064) 28%,
-    rgba(255, 168, 166, 0.2553396358543417) 59%,
-    rgba(246, 197, 158, 0.2721463585434174) 100%
-  );
   box-sizing: content-box;
 }
 
@@ -43,4 +34,15 @@ ol {
 img {
   display: block;
   max-width: 100%;
+}
+#root{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100svw;
+  height: 100svh;
+  background-image: url("./assets/antique-cafe-bg-01.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
