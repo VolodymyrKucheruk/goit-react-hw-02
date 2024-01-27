@@ -1,6 +1,6 @@
 import css from "./Options.module.css";
 
-export const Options = ({ onUpdate, reset, feedbecks }) => {
+export const Options = ({ onUpdate, reset, feedbacks }) => {
   const options = ["good", "neutral", "bad"];
   return (
     <ul className={css.list}>
@@ -11,7 +11,7 @@ export const Options = ({ onUpdate, reset, feedbecks }) => {
           </button>
         </li>
       ))}
-      {feedbecks > 0 && (
+      {feedbacks > 0 && (
         <button className={css.reset} onClick={reset}>
           Reset❌
         </button>

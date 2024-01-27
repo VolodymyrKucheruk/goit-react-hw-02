@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 import { Description } from "./Description/Description";
 import { Options } from "./Options/Options";
-import { Feedbeck } from "./Feedbeck/Feedbeck";
+import { Feedback } from "./Feedback/Feedback";
 import { Notification } from "./Notification/Notification";
 
 const stats = {
@@ -15,53 +15,53 @@ const stats = {
 
 export const App = () => {
   const getLocalStorageData = () => {
-    const savedFeedbeck = window.localStorage.getItem("my-stats");
-    if (savedFeedbeck !== null) {
-      return JSON.parse(savedFeedbeck);
+    const savedFeedback = window.localStorage.getItem("my-stats");
+    if (savedFeedback !== null) {
+      return JSON.parse(savedFeedback);
     }
     return stats;
   };
-  const [clicks, setClicks] = useState(getLocalStorageData);
+  const [counts, setCounts] = useState(getLocalStorageData);
 
   useEffect(() => {
-    window.localStorage.setItem("my-stats", JSON.stringify(clicks));
-  }, [clicks]);
+    window.localStorage.setItem("my-stats", JSON.stringify(counts));
+  }, [counts]);
 
-  const handleClick = (value) => {
-    setClicks((prevClicks) => ({
-      ...prevClicks,
-      [value]: prevClicks[value] + 1,
+  const handleCounts = (value) => {
+    setCounts((prevCounts) => ({
+      ...prevCounts,
+      [value]: prevCounts[value] + 1,
     }));
   };
-  const resetLokalStorage = () => {
-    window.localStorage.clear();
+  const resetLocalStorageItem = () => {
+    window.localStorage.removeItem("my-stats");
   };
-  const resetArr = () => {
-    setClicks({
+  const resetCounts  = () => {
+    setCounts({
       good: 0,
       neutral: 0,
       bad: 0,
     });
   };
-  let totalFeedback = clicks.good + clicks.neutral + clicks.bad;
-  let percentagePositiveClick = Math.round(
-    ((clicks.good + clicks.neutral) / totalFeedback) * 100
+  let totalFeedback = counts.good + counts.neutral + counts.bad;
+  let percentagePositiveCounts = Math.round(
+    ((counts.good + counts.neutral) / totalFeedback) * 100
   );
   return (
     <>
       <Description />
-      <div className={css.wrapperFeedbeck}>
+      <div className={css.wrapperFeedback}>
         <Options
-          onUpdate={handleClick}
-          reset={resetArr}
-          feedbecks={totalFeedback}
+          onUpdate={handleCounts}
+          reset={resetCounts}
+          feedbacks={totalFeedback}
         />
         {totalFeedback ? (
-          <Feedbeck
-            value={clicks}
-            feedbecks={totalFeedback}
-            reset={resetLokalStorage}
-            positiveClicks={percentagePositiveClick}
+          <Feedback
+            value={counts}
+            feedbacks={totalFeedback}
+            reset={resetLocalStorageItem}
+            positiveClicks={percentagePositiveCounts}
           />
         ) : (
           <Notification />

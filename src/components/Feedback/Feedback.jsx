@@ -1,6 +1,6 @@
-import css from "./Feedbeck.module.css";
+import css from "./Feedback.module.css";
 
-export const Feedbeck = ({ value, feedbecks, positiveClicks }) => {
+export const Feedback = ({ value, feedbacks, positiveClicks }) => {
   const options = Object.keys(value);
 
   return (
@@ -14,7 +14,7 @@ export const Feedbeck = ({ value, feedbecks, positiveClicks }) => {
       ))}
 
       <div>
-        <p>Total: {feedbecks}</p>
+        <p>Total: {feedbacks}</p>
         <p>Positive:{positiveClicks}%</p>
       </div>
     </ul>
